@@ -1,5 +1,10 @@
 package com.qj;
 
+import java.util.Arrays;
+
+/**
+ * @author qinjian
+ */
 public class 零钱兑换_322 {
 
     public static void main(String[] args) {
@@ -10,26 +15,34 @@ public class 零钱兑换_322 {
     }
 
     public int coinChange(int[] coins, int amount) {
+        int[] coinsTmep = new int[amount + 1];
+        // 填充上一个约定的 特殊值
+        Arrays.fill(coinsTmep, -666);
         // 题目要求的最终结果是 dp(amount)
-        return dp(coins, amount);
+        return dp(coins, amount, coinsTmep);
     }
 
-    private int dp(int[] coins, int amount) {
+    private int dp(int[] coins, int amount, int[] coinsTmep) {
 
         if (amount < 0) return -1;
         if (amount == 0) return 0;
 
+        // 如果已经缓存了，则直接返回
+        if (-666 != coinsTmep[amount]) {
+            return coinsTmep[amount];
+        }
+
         int res = Integer.MAX_VALUE;
         for (int coin : coins) {
             // 计算子问题的结果
-            int subProblem = dp(coins, amount - coin);
+            int subProblem = dp(coins, amount - coin, coinsTmep);
             // 子问题无解则跳过
             if (subProblem == -1) continue;
             // 在子问题中选择最优解，然后加一
             res = Math.min(res, subProblem + 1);
         }
 
-        return res == -5 ? -1 : res;
+        coinsTmep[amount] = (res == Integer.MAX_VALUE ? -1 : res);
+        return coinsTmep[amount];
     }
-
 }
