@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 public class 有效的括号_20 {
 
-    private static Map<Character, Character> map = new HashMap<>();
+    private static final Map<Character, Character> map = new HashMap<>();
 
     static {
         // key - value
