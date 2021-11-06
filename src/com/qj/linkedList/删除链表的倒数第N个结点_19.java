@@ -1,5 +1,7 @@
 package com.qj.linkedList;
 
+import java.util.LinkedHashMap;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -13,6 +15,11 @@ package com.qj.linkedList;
  * @author qinjian
  */
 public class 删除链表的倒数第N个结点_19 {
+    public static void main(String[] args) {
+        LinkedHashMap<Object, Object> map = new LinkedHashMap<>();
+        map.remove("key");
+
+    }
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
