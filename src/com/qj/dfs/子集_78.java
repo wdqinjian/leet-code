@@ -26,14 +26,18 @@ public class 子集_78 {
 
     private void dfs(int[] nums, int index, List<Integer> path, List<List<Integer>> res) {
 
+        // 加入当次递归的结果
         if (index == nums.length) {
             res.add(new ArrayList<>(path));
             return;
         }
 
+        // 加入
         path.add(nums[index]);
         dfs(nums, index + 1, path, res);
+        // 移除path 最后一个元素
         path.remove(path.size() - 1);
+        // 再次递归
         dfs(nums, index + 1, path, res);
 
     }
