@@ -1,9 +1,12 @@
 package com.qj;
 
-class Solution {
+/**
+ * @author qinjian
+ */
+public class 下一个更大元素I_496 {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        下一个更大元素I_496 solution = new 下一个更大元素I_496();
         int[] nums1 = {4, 1, 2};
         int[] nums2 = {1, 3, 4, 2};
         int[] result = solution.nextGreaterElement(nums1, nums2);
