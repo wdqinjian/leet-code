@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-class Solution {
+/**
+ * @author qinjian
+ */
+public class 找到所有数组中消失的数字_448 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        找到所有数组中消失的数字_448 solution = new 找到所有数组中消失的数字_448();
         int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
         List<Integer> list = solution.findDisappearedNumbers(nums);
 
