@@ -2,10 +2,13 @@ package com.qj.math;
 
 import java.util.Arrays;
 
-class Solution {
+/**
+ * @author qinjian
+ */
+public class 计数质数_204 {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        计数质数_204 solution = new 计数质数_204();
         System.out.println(solution.countPrimes(10));
     }
 
