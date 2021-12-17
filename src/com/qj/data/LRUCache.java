@@ -1,4 +1,4 @@
-package com.qj;
+package com.qj.data;
 
 import java.util.LinkedHashMap;
 
