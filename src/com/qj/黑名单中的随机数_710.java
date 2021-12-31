@@ -1,20 +1,22 @@
-package com.qj.array;
+package com.qj;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-class Solution {
+/**
+ * @author qinjian
+ */
+public class 黑名单中的随机数_710 {
 
     Random ran = new Random();
     private List<Integer> whitelist;
 
-    public Solution(int n, int[] blacklist) {
+    public 黑名单中的随机数_710(int n, int[] blacklist) {
 
         int length = n - blacklist.length;
 
         whitelist = new ArrayList<>(length);
-
 
         for (int i = 0; i < n; i++) {
             boolean falg = true;
@@ -33,7 +35,7 @@ class Solution {
     public static void main(String[] args) {
         int n = 10;
         int[] blacklist = {4, 8, 9};
-        Solution solution = new Solution(10, blacklist);
+        黑名单中的随机数_710 solution = new 黑名单中的随机数_710(10, blacklist);
 
         int pick = solution.pick();
         System.out.println(pick);
