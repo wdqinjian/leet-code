@@ -37,8 +37,8 @@ public class 加一_66 {
 
     public static void main(String[] args) {
         加一_66 solution = new 加一_66();
-        int[] digits = {9, 9, 9, 9};
-        int[] ints = solution.plusOne(digits);
+        int[] digits = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+        int[] ints = solution.plusOne2(digits);
         for (int i = 0; i < ints.length; i++) {
             System.out.print(ints[i]);
         }
@@ -76,6 +76,27 @@ public class 加一_66 {
         // 如果所有的元素均为9， 没走上面的逻辑
         digits = new int[length + 1];
         digits[0] = 1;
+        return digits;
+    }
+
+
+    public int[] plusOne2(int[] digits) {
+
+        int length = digits.length;
+        int result = digits[length - 1];
+        for (int i = length - 2; i >= 0; i--) {
+            result += digits[i] * Math.pow(10, length - 1 - i);
+        }
+        result++;
+
+        String num = String.valueOf(result);
+        int len = num.length();
+        digits = new int[len];
+        // result % 10
+        // result = result / 10;
+        for (int i = 0; i < len; i++) {
+            digits[i] = Integer.valueOf(num.substring(i, i + 1));
+        }
         return digits;
     }
 }
