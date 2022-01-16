@@ -46,6 +46,8 @@ package com.qj.string;
  * <p>
  * 1 <= operations.length <= 100
  * operations[i] 将会是 "++X"、"X++"、"--X" 或 "X--"
+ *
+ * @author qinjian
  */
 public class 执行操作后的变量值_2011 {
 
